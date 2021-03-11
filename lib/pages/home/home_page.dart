@@ -47,8 +47,8 @@ class _HomePageState extends State<HomePage> {
             },
           ),
           PageViewApp(
-            top:
-                _yPosition, //!_showMenu ? _screenHeight * .16 : _screenHeight * .80,
+            top: _yPosition,
+            showMenu: _showMenu,
             onChanged: (index) {
               setState(() {
                 _currentIndex = index;

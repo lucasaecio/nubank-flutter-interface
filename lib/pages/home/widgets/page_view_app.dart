@@ -5,8 +5,10 @@ class PageViewApp extends StatelessWidget {
   final double top;
   final ValueChanged<int> onChanged;
   final GestureDragUpdateCallback onPanUpdate;
+  final bool showMenu;
 
-  const PageViewApp({Key key, this.top, this.onChanged, this.onPanUpdate})
+  const PageViewApp(
+      {Key key, this.top, this.onChanged, this.onPanUpdate, this.showMenu})
       : super(key: key);
 
   @override
@@ -22,7 +24,9 @@ class PageViewApp extends StatelessWidget {
         onPanUpdate: onPanUpdate,
         child: PageView(
           onPageChanged: onChanged,
-          physics: BouncingScrollPhysics(),
+          physics: showMenu
+              ? NeverScrollableScrollPhysics()
+              : BouncingScrollPhysics(),
           children: [
             CardApp(),
             CardApp(),
