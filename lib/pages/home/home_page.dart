@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_nubank_interface/pages/home/widgets/menu_app.dart';
 import 'package:flutter_nubank_interface/pages/home/widgets/my_app_bart.dart';
 import 'package:flutter_nubank_interface/pages/home/widgets/my_dots_app.dart';
 import 'package:flutter_nubank_interface/pages/home/widgets/page_view_app.dart';
@@ -45,6 +46,10 @@ class _HomePageState extends State<HomePage> {
                 _yPosition = _showMenu ? positionBottomLimit : positionTopLimit;
               });
             },
+          ),
+          MenuApp(
+            top: positionTopLimit,
+            showMenu: _showMenu,
           ),
           PageViewApp(
             top: _yPosition,
