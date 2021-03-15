@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/implicit_animations.dart';
 
 class MyDotsApp extends StatelessWidget {
   final int currentIndex;
