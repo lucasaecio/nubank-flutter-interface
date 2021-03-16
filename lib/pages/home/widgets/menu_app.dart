@@ -19,63 +19,64 @@ class MenuApp extends StatelessWidget {
         child: Container(
             //color: Colors.red,
             height: MediaQuery.of(context).size.height * 0.6,
-            child: Column(
-              children: [
-                Padding(
-                  padding: EdgeInsets.all(15),
-                  child: Image.network(
-                    "https://pngimg.com/uploads/qr_code/qr_code_PNG12.png",
-                    height: 120,
-                    color: Colors.white,
+            child: SingleChildScrollView(
+              physics: BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(15),
+                    child: Image.network(
+                      "https://pngimg.com/uploads/qr_code/qr_code_PNG12.png",
+                      height: 120,
+                      color: Colors.white,
+                    ),
                   ),
-                ),
-                Text.rich(
-                  TextSpan(
-                    text: "Banco ",
-                    children: [
-                      TextSpan(
-                        text: '260 - Nu Pagamentos S.A',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
+                  Text.rich(
+                    TextSpan(
+                      text: "Banco ",
+                      children: [
+                        TextSpan(
+                          text: '260 - Nu Pagamentos S.A',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                    style: TextStyle(fontSize: 14),
                   ),
-                  style: TextStyle(fontSize: 14),
-                ),
-                SizedBox(height: 5),
-                Text.rich(
-                  TextSpan(
-                    text: "Agência ",
-                    children: [
-                      TextSpan(
-                        text: '0001',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
+                  SizedBox(height: 5),
+                  Text.rich(
+                    TextSpan(
+                      text: "Agência ",
+                      children: [
+                        TextSpan(
+                          text: '0001',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                    style: TextStyle(fontSize: 14),
                   ),
-                  style: TextStyle(fontSize: 14),
-                ),
-                SizedBox(height: 5),
-                Text.rich(
-                  TextSpan(
-                    text: "Conta ",
-                    children: [
-                      TextSpan(
-                        text: '0000000-0',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      )
-                    ],
+                  SizedBox(height: 5),
+                  Text.rich(
+                    TextSpan(
+                      text: "Conta ",
+                      children: [
+                        TextSpan(
+                          text: '0000000-0',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        )
+                      ],
+                    ),
+                    style: TextStyle(fontSize: 14),
                   ),
-                  style: TextStyle(fontSize: 14),
-                ),
-                SizedBox(height: 25),
-                SingleChildScrollView(
-                  child: Padding(
+                  SizedBox(height: 25),
+                  Padding(
                     padding: EdgeInsets.symmetric(horizontal: 30),
                     child: Column(
                       children: [
@@ -131,9 +132,9 @@ class MenuApp extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
-                )
-              ],
+                  )
+                ],
+              ),
             )),
       ),
     );
