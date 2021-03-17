@@ -106,7 +106,7 @@ class MenuApp extends StatelessWidget {
                         ),
                         SizedBox(height: 25),
                         Container(
-                          height: 35,
+                          height: 40,
                           width: double.infinity,
                           decoration: BoxDecoration(
                             border: Border.all(
@@ -126,7 +126,8 @@ class MenuApp extends StatelessWidget {
                             onPressed: () {},
                             child: Text(
                               'LOGOUT',
-                              style: TextStyle(fontSize: 14),
+                              style: TextStyle(
+                                  fontSize: 14, fontWeight: FontWeight.bold),
                             ),
                           ),
                         ),

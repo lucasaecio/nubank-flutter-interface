@@ -2,7 +2,6 @@ import 'package:flutter/widgets.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_nubank_interface/pages/home/widgets/bottom_menu.dart';
-import 'package:flutter_nubank_interface/pages/home/widgets/item_menu_bottom.dart';
 import 'package:flutter_nubank_interface/pages/home/widgets/menu_app.dart';
 import 'package:flutter_nubank_interface/pages/home/widgets/my_app_bart.dart';
 import 'package:flutter_nubank_interface/pages/home/widgets/my_dots_app.dart';
@@ -53,6 +52,11 @@ class _HomePageState extends State<HomePage> {
             top: positionTopLimit,
             showMenu: _showMenu,
           ),
+          MyDotsApp(
+            top: _screenHeight * .66,
+            currentIndex: _currentIndex,
+            showMenu: _showMenu,
+          ),
           PageViewApp(
             top: _yPosition,
             showMenu: _showMenu,
@@ -96,11 +100,6 @@ class _HomePageState extends State<HomePage> {
                 }
               });
             },
-          ),
-          MyDotsApp(
-            top: _screenHeight * .66,
-            currentIndex: _currentIndex,
-            showMenu: _showMenu,
           ),
           BottomMenu(
             showMenu: _showMenu,
